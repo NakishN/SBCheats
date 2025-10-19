@@ -1,0 +1,25 @@
+# Cargo.toml
+[package]
+name = "cheat_detector"
+version = "5.0.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.27"
+egui = "0.27"
+zip = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rayon = "1.8"
+chrono = { version = "0.4", features = ["serde"] }
+walkdir = "2.4"
+rfd = "0.14"
+dirs = "5.0"
+num_cpus = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
