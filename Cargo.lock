@@ -3,6 +3,22 @@
 version = 4
 
 [[package]]
+name = "SBCheats_scanner"
+version = "5.1.0"
+dependencies = [
+ "dirs",
+ "eframe",
+ "egui",
+ "num_cpus",
+ "rayon",
+ "rfd",
+ "serde",
+ "serde_json",
+ "walkdir",
+ "zip",
+]
+
+[[package]]
 name = "ab_glyph"
 version = "0.2.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -771,22 +787,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0ced0551234e87afee12411d535648dd89d2e7f34c78b753395567aff3d447ff"
 dependencies = [
  "libc",
-]
-
-[[package]]
-name = "cheat_detector"
-version = "5.1.0"
-dependencies = [
- "dirs",
- "eframe",
- "egui",
- "num_cpus",
- "rayon",
- "rfd",
- "serde",
- "serde_json",
- "walkdir",
- "zip",
 ]
 
 [[package]]
