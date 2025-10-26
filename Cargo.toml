@@ -15,6 +15,10 @@ rfd = "0.14"
 dirs = "5.0"
 num_cpus = "1.0"
 
+# ИСПРАВЛЕНО: Правильная настройка иконки для Windows
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
 [profile.release]
 opt-level = 3
 lto = "fat"              # Агрессивная оптимизация линковщика

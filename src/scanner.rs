@@ -40,7 +40,6 @@ impl Scanner {
         self.cancel_flag.store(true, Ordering::Relaxed);
     }
 
-    // КРИТИЧЕСКАЯ ОПТИМИЗАЦИЯ: Параллельный поиск файлов
     pub fn find_jar_files(&self, search_path: &Path) -> Vec<PathBuf> {
         WalkDir::new(search_path)
             .follow_links(true)

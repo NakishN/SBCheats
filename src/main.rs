@@ -1,5 +1,8 @@
 // main.rs
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 mod detector;
+
 
 use detector::{CheatDetector, ThreatResult};
 use eframe::egui;
@@ -12,6 +15,7 @@ use std::time::Instant;
 use walkdir::WalkDir;
 
 // ==================== СТРУКТУРЫ ====================
+
 
 #[derive(Debug, Clone)]
 enum ScanMessage {
